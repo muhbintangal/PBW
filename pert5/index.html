@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 2 - Pendaftaran Mahasiswa</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            padding: 50px 0;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 40px;
+            width: 60%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+
+        }
+
+
+        input[type="radio"] {
+            margin-right: 5px;
+            margin-bottom: 20px;
+        }
+
+        .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        #submit {
+            display: block;
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: none;
+            background-color: #0000ff;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        #submit:hover {
+            background-color: #0000cc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">Pendaftaran Mahasiswa Baru</h1>
+        <form action="#" method="POST">
+            <label for="npm">NPM (Nomor Pokok Mahasiswa)</label>
+            <input type="text" name="npm" id="npm" placeholder="Masukkan NPM">
+
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" name="nama" id="nama" placeholder="Masukkan Nama Lengkap">
+
+            <label for="alamat">Alamat</label>
+            <textarea name="alamat" id="alamat" rows="4"></textarea>
+
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+                <input type="radio" name="jk" id="pria" value="pria">
+                <label for="pria">Pria</label>
+                <input type="radio" name="jk" id="wanita" value="wanita">
+                <label for="wanita">Wanita</label>
+            </div>
+
+            <label for="prostud">Program Studi</label>
+            <select name="prodi" id="prostud">
+                <option value="1">Sistem Informasi</option>
+                <option value="2">Informatika</option>
+            </select>
+
+            <button type="submit" id="submit">Tambah</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
